@@ -20,7 +20,16 @@
     },
     "intent": {
       "type": "string",
-      "description": "Background context describing buyer's intent (e.g., 'looking for a gift under $50', 'need something durable for outdoor use'). Informs relevance, recommendations, and personalization."
+      "description": "Background context describing buyer's intent (e.g., 'looking for a gift under $50', 'need something durable for outdoor use').\nInforms relevance, recommendations, and personalization."
+    },
+    "eligibility": {
+      "type": "array",
+      "description": "Opaque, reverse-domain-namespaced eligibility signals. The Business applies recognized signals per its own stacking rules and ignores unrecognized values. Strings MUST NOT contain user-unique identifiers.",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "maxLength": 256
+      }
     }
   }
 }

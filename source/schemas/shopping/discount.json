@@ -50,6 +50,15 @@
           "default": false,
           "description": "True if applied automatically by merchant rules (no code required)."
         },
+        "provisional": {
+          "type": "boolean",
+          "default": false,
+          "description": "True if this discount is contingent on verification at completion."
+        },
+        "eligibility": {
+          "type": "string",
+          "description": "The context.eligibility signal that triggered this discount. Omitted for code-based and non-eligibility automatic discounts."
+        },
         "method": {
           "type": "string",
           "enum": [
